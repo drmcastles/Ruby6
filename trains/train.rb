@@ -14,11 +14,13 @@ class Train
     @@trains[number]
   end
 
-  def initialize(number)
+  def initialize(number, company_name)
     @speed = 0
     @number = number
     @carriages = []
     @route = route
+    register_instance
+    @@trains[number] = self
   end
 
   def speed_control(value)
